@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# memoteca
-Projeto Angular - Curso de Angular 14: aplique os conceitos e desenvolva seu primeiro CRUD. https://cursos.alura.com.br/course/angular-explorando-framework
-=======
 # Memoteca
 Projeto Angular - Curso de Angular 14: aplique os conceitos e desenvolva seu primeiro CRUD. https://cursos.alura.com.br/course/angular-explorando-framework
 
@@ -30,4 +26,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
->>>>>>> Inicializacao_Projeto_Angular
