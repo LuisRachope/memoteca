@@ -4,7 +4,7 @@ Projeto Angular - Curso de Angular 14: aplique os conceitos e desenvolva seu pri
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Ambient Preparation
-`npm install -g @angular/cli@14.0.0`
+`npm install`
 
 ## Development server
 
