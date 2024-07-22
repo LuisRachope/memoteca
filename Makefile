@@ -1,6 +1,9 @@
 # Commands
 
 exec:
+	ng serve
+
+exec_with_open:
 	ng serve --open
 
 exec_generate_component:
