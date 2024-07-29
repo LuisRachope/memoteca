@@ -19,4 +19,12 @@ export class CriarPensamentoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  criarPensamento() {
+    alert("Novo pensamento criado!")
+  }
+
+  cancelarPensamento() {
+    alert("Ação cancelada!")
+  }
+
 }
