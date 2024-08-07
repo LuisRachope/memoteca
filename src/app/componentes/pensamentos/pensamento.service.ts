@@ -21,8 +21,8 @@ export class PensamentoService {
     return this.http.get<Pensamento[]>(this.API).pipe(
       map(pensamentos => {
         const validIds = pensamentos
-          .map(p => p.id)
-          .filter(id => id !== undefined) as number[]; // Filtrar IDs válidos e assegurar que são números
+          .map(p => parseInt(p.id as string, 10))  // Convertendo string para número
+          .filter(id => !isNaN(id));  // Filtrar IDs válidos (números)
         const lastId = validIds.length > 0 ? Math.max(...validIds) : 0;
         return lastId + 1;
       })
@@ -32,11 +32,21 @@ export class PensamentoService {
   criar(pensamento: Pensamento): Observable<Pensamento> {
     return this.getNextId().pipe(
       map(nextId => {
-        pensamento.id = nextId;
+        pensamento.id = nextId.toString();  // Convertendo o ID para string antes de salvar
         return pensamento;
       }),
       switchMap(pensamentoComId => this.http.post<Pensamento>(this.API, pensamentoComId))
     );
+  }
+
+  excluir(id: string): Observable<Pensamento> {
+    const url = `${this.API}/${id}`
+    return this.http.delete<Pensamento>(url)
+  }
+
+  buscarPorId(id: string): Observable<Pensamento> {
+    const url = `${this.API}/${id}`
+    return this.http.get<Pensamento>(url)
   }
 
 }
