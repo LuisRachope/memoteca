@@ -23,7 +23,7 @@ export class CriarPensamentoComponent implements OnInit {
     this.formulario = this.formBuilder.group({
       conteudo: ['Formulário reativo'],
       autoria: [''],
-      module: ['modelo1']
+      modelo: ['modelo1']
     })
   }
 
