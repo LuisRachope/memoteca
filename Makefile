@@ -11,4 +11,7 @@ exec_generate_component:
 		echo "Error: Component name not provided. Use 'make generate-component name=<component-name>'"; \
 		exit 1; \
 	fi
-	ng generate component $(name)   
+	ng generate component $(name)
+
+exec_backend:
+	cd backend && npm start
