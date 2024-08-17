@@ -38,18 +38,10 @@ export class EditarPensamentoComponent implements OnInit {
   }
 
   editarPensamento() {
-    if (this.formulario.valid) {
-      const pensamentoAtualizado = {
-        ...this.formulario.value,
-        id: this.route.snapshot.paramMap.get('id')
-      };
-
-      this.service.editar(pensamentoAtualizado).subscribe(() => {
-        this.router.navigate(['/listarPensamento']);
-      });
-    }
+    this.service.editar(this.formulario.value).subscribe(() => {
+      this.router.navigate(['/listarPensamento'])
+    })
   }
-
 
   cancelarPensamento() {
     this.router.navigate(['/listarPensamento'])
